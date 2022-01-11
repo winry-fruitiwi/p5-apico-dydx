@@ -89,5 +89,22 @@ function draw() {
     image(environment, 0, 0)
 
     // apico cursor
-    image(cursor, mouseX, mouseY)
+    // image(cursor, mouseX, mouseY)
+    image(generateBee(), mouseX, mouseY)
+}
+
+// bees are always 3 pixels wide
+function generateBee() {
+    let yellow = color(42, 69, 84)
+    let black = color(221, 66, 20)
+    let wing = color(34, 3, 91)
+
+    let pg = createGraphics(3, 2);
+    pg.loadPixels()
+    pg.set(1, 0, wing)
+    pg.set(0, 1, black)
+    pg.set(1, 1, yellow)
+    pg.set(2, 1, black)
+    pg.updatePixels()
+    return pg
 }
