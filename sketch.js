@@ -1,9 +1,24 @@
 /*
-@author
-@date 2022-01-
+@author Winry
+@date 2022-01-11
 
+Coding plan:
+    .steal images
+    background
+    switch cursor to the apico cursor
+    generateBee, test
+    switch cursor to bee
+    scaleImage on single pixel graphics
+    scaleImage on any small photo graphic, test on bee and cursor
+    switch cursor to scaled apico cursor and bee cursor
 
-in pixels[], the first pixel's red is pixels[0], alpha is 
+    additional projects:
+        bee particle
+        inventory
+        moving character
+        design character sprite
+
+in pixels[], the first pixel's red is pixels[0], alpha is
 pixels[3]. The second pixel starts at pixels[4]. 
 
 https://p5js.org/reference/#/p5/get
