@@ -3,8 +3,8 @@
 @date 2022-01-11
 
 Coding plan:
-    .steal images
-    background
+   .steal images
+   .background
     switch cursor to the apico cursor
     generateBee, test
     switch cursor to bee
@@ -67,19 +67,22 @@ you're responsible for:
     
 
  */
-let font
+let font, environment
 
 function preload() {
     font = loadFont('data/meiryo.ttf')
+    environment = loadImage("data/environment-640x360.png")
 }
 
 function setup() {
     createCanvas(640, 360)
     colorMode(HSB, 360, 100, 100, 100)
+
+    noSmooth()
 }
 
 function draw() {
-    background(209, 80, 30)
-    
     background(234, 34, 24)
+
+    image(environment, 0, 0)
 }
