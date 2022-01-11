@@ -67,11 +67,12 @@ you're responsible for:
     
 
  */
-let font, environment
+let font, environment, cursor
 
 function preload() {
     font = loadFont('data/meiryo.ttf')
     environment = loadImage("data/environment-640x360.png")
+    cursor = loadImage("data/apico-6x8-cursor.png")
 }
 
 function setup() {
@@ -79,10 +80,14 @@ function setup() {
     colorMode(HSB, 360, 100, 100, 100)
 
     noSmooth()
+    noCursor()
 }
 
 function draw() {
     background(234, 34, 24)
 
     image(environment, 0, 0)
+
+    // apico cursor
+    image(cursor, mouseX, mouseY)
 }
